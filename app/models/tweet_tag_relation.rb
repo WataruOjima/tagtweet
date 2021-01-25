@@ -1,4 +1,4 @@
-class TweetTagRelation < ApplicationRecord\
-  belongs_to: :tag
-  belongs_to: :tweet
+class TweetTagRelation < ApplicationRecord
+  belongs_to :tweet
+  belongs_to :tag
 end

@@ -6,7 +6,7 @@ class TweetsController < ApplicationController
   def new
     @tweet = TweetsTag.new
   end
-  
+
   def create
     @tweet = TweetsTag.new(tweet_params)
     if @tweet.valid?
@@ -22,4 +22,5 @@ class TweetsController < ApplicationController
   def tweet_params
     params.require(:tweets_tag).permit(:message, :name)
   end
+
 end
