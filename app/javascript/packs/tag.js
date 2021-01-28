@@ -7,6 +7,9 @@ if (location.pathname.match("tweets/new")){
       XHR.open("GET", `search/?keyword=${keyword}`, true);
       XHR.responseType = "json";
       XHR.send();
+      XHR.onload = () => {
+        const tagName = XHR.response.keyword;
+      };
     })
   });
 };
